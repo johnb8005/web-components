@@ -1,11 +1,7 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import Layout from "./layout";
-import Router from "./router";
+class MyComponent extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = `<h1>Hello world</h1>`;
+  }
+}
 
-ReactDOM.render(
-  <Layout>
-    <Router />
-  </Layout>,
-  document.getElementById("root")
-);
+customElements.define("my-component", MyComponent);
